@@ -10,7 +10,7 @@ import { ProductService } from '../../services/product-service';
 })
 export class Home {
 
-  constructor(private productService:ProductService) {
+  constructor(private productService: ProductService) {
 
   }
 
@@ -28,13 +28,15 @@ export class Home {
   })
 
   addProductDetails() {
-    console.log(this.addProductForm.value);
-    
+    this.productService.addProductData(this.addProductForm.value).subscribe((response) => {
+      console.log(response);
+    });
+    // console.log(this.addProductForm.value);
   }
-  
+
   clearFormData() {
     // this.addProductForm.reset()
-    
+
     this.addProductForm.removeControl
     console.log(this.addProductForm.removeControl);
   }

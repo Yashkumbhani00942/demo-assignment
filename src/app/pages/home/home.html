@@ -1,0 +1,82 @@
+<div class="home-main h-100 d-flex flex-column align-items-center justify-content-center">
+  <!-- <h1>home-layout works!</h1> -->
+  <!-- <button type="button" class="btn btn-primary">Add Product</button> -->
+  <div class="add-product-form">
+    <h2 class="text-center mb-2">Add Product Data</h2>
+
+    <form [formGroup]="addProductForm" (ngSubmit)="addProductDetails()" method="post" class="add-product-data p-5">
+      
+      <h5 class="fw-bold mb-3">Product Information :</h5>
+      <div class="row mx-0">
+        <div class="col-md-6 col-12 form-field-group">
+          <label for="ProductTitle" class="d-block fw-bold mb-1">Product Title <span class="mandatory-fillup">*</span></label>
+          <input id="ProductTitle" type="text" class="border-0" placeholder="Product Title" formControlName="productTitle">
+        </div> 
+  
+        <div class="col-md-6 col-12 form-field-group">
+          <label for="ProductCategories" class="d-block fw-bold mb-1">Product Categories</label>
+          <input id="ProductCategories" type="text" class="border-0" placeholder="Product Categories" formControlName="productCategories">
+        </div>
+
+        <div class="col-md-6 col-12 form-field-group">
+          <label for="ProductDescription" class="d-block fw-bold mb-1">Product Description <span class="mandatory-fillup">*</span></label>
+          <input id="ProductDescription" type="text" class="border-0" placeholder="Product Description" formControlName="productDescription">
+        </div>
+
+        <div class="col-md-6 col-12 form-field-group">
+          <label for="BrandName" class="d-block fw-bold mb-1">Product Brand Name</label>
+          <input id="BrandName" type="text" class="border-0" placeholder="Product Brand Name" formControlName="brandName">
+        </div>
+
+        <hr class="my-3 p-0">
+        
+
+        <h5 class="fw-bold mb-3">Product Pricing & Discount :</h5>
+        <div class="col-md-6 col-12 form-field-group">
+          <label for="ProductPrice" class="d-block fw-bold mb-1">Product Price <span class="mandatory-fillup">*</span></label>
+          <input id="ProductPrice" type="number" class="border-0" placeholder="Product Price" formControlName="productPrice">
+        </div>
+  
+        <div class="col-md-6 col-12 form-field-group">
+          <label for="DiscountPercentage" class="d-block fw-bold mb-1">Discount Percentage</label>
+          <input id="DiscountPercentage" type="number" class="border-0" placeholder="Discount Percentage" formControlName="discountPercentage">
+        </div>
+  
+        <div class="col-md-6 col-12 form-field-group">
+          <label for="ProductRating" class="d-block fw-bold mb-1">Product Rating</label>
+          <input id="ProductRating" type="number" class="border-0" placeholder="Product Rating" formControlName="productRating">
+        </div>
+
+        <div class="col-md-6 col-12 form-field-group">
+          <label for="ProductStocks" class="d-block fw-bold mb-1">Product Stocks <span class="mandatory-fillup">*</span></label>
+          <input id="ProductStocks" type="number" class="border-0" placeholder="Product Stocks" formControlName="productStocks">
+        </div>
+
+        <hr class="my-3 p-0">
+
+
+        <h5 class="fw-bold mb-3">Product Thumbnail & Images :</h5>
+        <div class="col-md-6 col-12">
+          <label for="ProductThumbnail" class="d-block fw-bold mb-1">Product Thumbnail <span class="mandatory-fillup">*</span></label>
+          <input id="ProductThumbnail" type="file" accept="image/*, .png, .jpeg, .jpg"class="border-0" placeholder="Product Thumbnail" formControlName="productThumbnail">
+        </div>
+  
+        <div class="col-md-6 col-12">
+          <label for="ProductImages" class="d-block fw-bold mb-1">Product Image <span class="mandatory-fillup">*</span></label>
+          <input id="ProductImages" type="file" accept="image/*, .png, .jpeg, .jpg" class="border-0" placeholder="Product Image" formControlName="productImages">
+        </div>
+      </div>
+
+      <div class="row mx-0 mt-4">
+        <div class="col-6 text-center">
+          <button type="submit" class="btn fw-bold">Submit</button>
+        </div>
+        <div class="col-6 text-center">
+          <button type="reset" class="btn fw-bold" (click)="clearFormData()">Clear</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+

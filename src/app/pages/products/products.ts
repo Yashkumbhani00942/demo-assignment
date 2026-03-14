@@ -23,10 +23,10 @@ export class Products {
     category: string;
     thumbnail: string;
     images: string[];
-  }[] | undefined; 
+  }[] | undefined;
 
-  ngOnInit(){
-    this.productData=this.productServices.getProductData()
+  ngOnInit() {
+    this.productServices.getProductData();
   }
 
 }

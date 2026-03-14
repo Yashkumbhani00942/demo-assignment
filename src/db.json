@@ -1,4 +1,44 @@
 {
-    "userDetails": [],
-    "productDetails": []
+  "userDetails": [],
+  "productDetails": [
+    {
+      "id": "578a",
+      "productTitle": "iPhone 9",
+      "productDescription": "An apple mobile which is nothing like apple",
+      "productPrice": 4524,
+      "discountPercentage": 42.69,
+      "productRating": 3.69,
+      "productStocks": 54,
+      "brandName": "Apple",
+      "productCategories": "smartphones",
+      "productThumbnail": "",
+      "productImages": ""
+    },
+    {
+      "id": "578a",
+      "productTitle": "iPhone 9",
+      "productDescription": "An apple mobile which is nothing like apple",
+      "productPrice": 4524,
+      "discountPercentage": 42.69,
+      "productRating": 3.69,
+      "productStocks": 54,
+      "brandName": "Apple",
+      "productCategories": "smartphones",
+      "productThumbnail": "",
+      "productImages": ""
+    },
+    {
+      "id": "578a",
+      "productTitle": "iPhone 9",
+      "productDescription": "An apple mobile which is nothing like apple",
+      "productPrice": 4524,
+      "discountPercentage": 42.69,
+      "productRating": 3.69,
+      "productStocks": 54,
+      "brandName": "Apple",
+      "productCategories": "smartphones",
+      "productThumbnail": "",
+      "productImages": ""
+    }
+  ]
 }

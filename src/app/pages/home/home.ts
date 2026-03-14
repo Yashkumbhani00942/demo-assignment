@@ -28,9 +28,10 @@ export class Home {
   })
 
   addProductDetails() {
-    this.productService.addProductData(this.addProductForm.value).subscribe((response) => {
-      console.log(response);
+    this.productService.addProductData(this.addProductForm.value).subscribe((response:any) => {
+      // console.log(response);
     });
+    this.addProductForm.reset()
     // console.log(this.addProductForm.value);
   }
 
@@ -38,7 +39,7 @@ export class Home {
     // this.addProductForm.reset()
 
     this.addProductForm.removeControl
-    console.log(this.addProductForm.removeControl);
+    console.log(this.addProductForm.removeControl); 
   }
 
 }

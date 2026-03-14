@@ -5,21 +5,25 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class ProductService {
-
-  productDetails: string = 'http://localhost:3000';
+  productDetails: string = 'http://localhost:3000/productDetails';
 
   constructor(private http: HttpClient) {
-    console.log(" Product services connected");
+    
   }
 
   addProductData(productData: any) {
-    return this.http.post(this.productDetails, productData)
+    return this.http.post(this.productDetails, productData);
   }
 
   getProductData() {
-    return this.http.get<any>(this.productDetails).subscribe((response) => {
-      console.log(response);
-    });
+    return this.http.get(this.productDetails);
   }
 
+  deleteProductData(produtID: any) {
+    return this.http.delete(this.productDetails + '/' + produtID);
+  }
+
+  updateProductData(productID: any, data: any) {
+    return this.http.put(this.productDetails + '/' + productID, data);
+  }
 }
